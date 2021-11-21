@@ -10,6 +10,7 @@ namespace TicTacToe
             // Infinite play, the fun NEVER ends!
             while (true)
             {
+                Console.WriteLine(); // Creating some space.
                 WelcomeMessage();
                 Console.WriteLine(); // Creating some space.
 
@@ -28,37 +29,30 @@ namespace TicTacToe
                 computerPlayer.GamePiece = gamePieceOrder.Item2;
 
                 // Determining order of play and starting.
-
-
-
-
-
-
-
-                // Simplify FURTHER!!!!!!
-                int x = 0;
+                bool crossesTurn = false;
 
                 if (fleshAndBloodPlayer.GamePiece == "x")
                 {
-                    x = 1;
+                    crossesTurn = true;
                 }
 
                 while (true)
                 {
-                    if (x == 0)
+                    if (crossesTurn == true)
                     {
                         var coordinates = fleshAndBloodPlayer.Move(currentMoves: board.Moves);
                         board.Move(coordinates, fleshAndBloodPlayer.GamePiece);
+                        crossesTurn = false;
                     }
                     else
                     {
                         var coordinates = computerPlayer.Move(currentMoves: board.Moves);
                         board.Move(coordinates, computerPlayer.GamePiece);
+                        crossesTurn = true;
                     }
 
                     board.DrawBoard();
                     if (board.IsGameComplete() == true) break;
-                    x = 1 - x;
                 }
             }
         }
