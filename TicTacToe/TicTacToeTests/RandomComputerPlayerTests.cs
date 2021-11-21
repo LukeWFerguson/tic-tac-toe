@@ -13,6 +13,43 @@ namespace TicTacToeTests
         [Test]
         public void MoveTest()
         {
+
+            int x = 0;
+            int i = 0;
+
+            while (true)
+            {
+                Console.WriteLine($"x: {x}");
+                x = 1 - x;
+
+                i = i + 1;
+                if (i == 100)
+                {
+                    break;
+                }
+            }
+
+            var yo = 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Init board and computer.
             Board board = new Board(size: 3);
             IPlayer computerPlayer = new RandomComputerPlayer();

@@ -6,6 +6,7 @@ namespace TicTacToe
     public class RandomComputerPlayer : IPlayer
     {
         public string GamePiece { get; set; }
+
         public (int, int) Move(string[,] currentMoves)
         {
             Random random = new Random();

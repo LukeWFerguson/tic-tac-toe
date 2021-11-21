@@ -28,33 +28,37 @@ namespace TicTacToe
                 computerPlayer.GamePiece = gamePieceOrder.Item2;
 
                 // Determining order of play and starting.
-                // TODO: This should probably change, think through this.
+
+
+
+
+
+
+
+                // Simplify FURTHER!!!!!!
+                int x = 0;
+
+                if (fleshAndBloodPlayer.GamePiece == "x")
+                {
+                    x = 1;
+                }
+
                 while (true)
                 {
-                    if (fleshAndBloodPlayer.GamePiece == "x")
+                    if (x == 0)
                     {
                         var coordinates = fleshAndBloodPlayer.Move(currentMoves: board.Moves);
                         board.Move(coordinates, fleshAndBloodPlayer.GamePiece);
-                        board.DrawBoard();
-                        if (board.IsGameComplete() == true) break;
-
-                        coordinates = computerPlayer.Move(currentMoves: board.Moves);
-                        board.Move(coordinates, computerPlayer.GamePiece);
-                        board.DrawBoard();
-                        if (board.IsGameComplete() == true) break;
                     }
                     else
                     {
                         var coordinates = computerPlayer.Move(currentMoves: board.Moves);
                         board.Move(coordinates, computerPlayer.GamePiece);
-                        board.DrawBoard();
-                        if (board.IsGameComplete() == true) break;
-
-                        coordinates = fleshAndBloodPlayer.Move(currentMoves: board.Moves);
-                        board.Move(coordinates, fleshAndBloodPlayer.GamePiece);
-                        board.DrawBoard();
-                        if (board.IsGameComplete() == true) break;
                     }
+
+                    board.DrawBoard();
+                    if (board.IsGameComplete() == true) break;
+                    x = 1 - x;
                 }
             }
         }
