@@ -25,7 +25,7 @@ namespace TicTacToe
                 IPlayer fleshAndBloodPlayer = new FleshAndBloodPlayer();
                 fleshAndBloodPlayer.GamePiece = gamePieceOrder.Item1;
 
-                IPlayer computerPlayer = new SimpleComputerPlayer();
+                IPlayer computerPlayer = new RandomComputerPlayer();
                 computerPlayer.GamePiece = gamePieceOrder.Item2;
 
                 // Determining order of play and starting.
