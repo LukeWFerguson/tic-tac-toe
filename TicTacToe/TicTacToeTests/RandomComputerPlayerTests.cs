@@ -1,9 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TicTacToe;
 
 namespace TicTacToeTests
@@ -13,49 +8,12 @@ namespace TicTacToeTests
         [Test]
         public void MoveTest()
         {
-
-            int x = 0;
-            int i = 0;
-
-            while (true)
-            {
-                Console.WriteLine($"x: {x}");
-                x = 1 - x;
-
-                i = i + 1;
-                if (i == 100)
-                {
-                    break;
-                }
-            }
-
-            var yo = 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             // Init board and computer.
             Board board = new Board(size: 3);
             IPlayer computerPlayer = new RandomComputerPlayer();
             computerPlayer.GamePiece = "x";
 
-            // Fill the board exept one move.
+            // Fill the board except one move.
             board.Move((0, 0), "x");
             board.Move((0, 1), "o");
             board.Move((0, 2), "x");

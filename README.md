@@ -6,9 +6,3 @@ Tic-Tac-Toe game.
 random moves.
 - Spec: https://www.thesprucecrafts.com/tic-tac-toe-game-rules-412170
 - Visualization: Text or ASCII art is fine, bonus points for graphics in Unity3D.
-
-## TODO:
-- Clean up the turn determination.
-- Create better computer player.
-	- Simply start by going for a game win instead of randomly moving.
-- Make sure to review the requirements and spec before turning in.

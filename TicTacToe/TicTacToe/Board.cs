@@ -91,7 +91,6 @@ namespace TicTacToe
             {
                 for (int j = 0; j < Moves.GetLength(0); j++)
                 {
-
                     // Checking principal diagonal...
                     if (i == j)
                     {
